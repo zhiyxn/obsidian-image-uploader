@@ -35,6 +35,7 @@ interface ImageUploaderSettings {
   uploadHeader: string;
   uploadBody: string;
   imageUrlPath: string;
+  baseUrl: string;
   maxWidth: number;
   enableResize: boolean;
 }
@@ -44,6 +45,7 @@ const DEFAULT_SETTINGS: ImageUploaderSettings = {
   uploadHeader: "",
   uploadBody: "{\"image\": \"$FILE\"}",
   imageUrlPath: "",
+  baseUrl: "",
   maxWidth: 4096,
   enableResize: false,
 };
@@ -133,7 +135,14 @@ export default class ImageUploader extends Plugin {
       axios.post(this.settings.apiEndpoint, formData, {
         "headers": JSON.parse(this.settings.uploadHeader)
       }).then(res => {
-        const url = objectPath.get(res.data, this.settings.imageUrlPath)
+        let url = objectPath.get(res.data, this.settings.imageUrlPath)
+        // Prepend baseUrl if it's configured and the url is not already a full URL
+        if (this.settings.baseUrl && url && !url.startsWith('http')) {
+          // Remove trailing slash from baseUrl and leading slash from url
+          const baseUrl = this.settings.baseUrl.replace(/\/$/, '');
+          const path = url.startsWith('/') ? url : '/' + url;
+          url = baseUrl + path;
+        }
         resolve(url)
       }, err => {
         reject(err)

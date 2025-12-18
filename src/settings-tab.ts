@@ -92,6 +92,18 @@ export default class ImageUploaderSettingTab extends PluginSettingTab {
                     })
             });
         new Setting(containerEl)
+            .setName("Base URL")
+            .setDesc("Optional base URL to prepend to the image path. Leave empty if the API returns complete URLs.")
+            .addText((text) => {
+                text
+                    .setPlaceholder("https://example.com")
+                    .setValue(this.plugin.settings.baseUrl)
+                    .onChange(async (value) => {
+                        this.plugin.settings.baseUrl = value;
+                        await this.plugin.saveSettings();
+                    })
+            });
+        new Setting(containerEl)
             .setName("Enable Resize")
             .setDesc("Resize the image before uploading")
             .addToggle((toggle) => {
