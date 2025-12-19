@@ -10,14 +10,16 @@ This plugin could resize(optional) and upload the image in your clipboard to any
 
 ## Changelog
 
-- 0.3.3
-	- Add Base URL configuration support
-- 0.3.2
-	- Add 'Upload All Local Images in This Page' command
-- 0.3.1
-	- Fix some minor problems
-- 0.3.0
-	- Support Obsidian Live Preview Editor
+-   0.3.4
+    -   update README
+-   0.3.3
+    -   Add Base URL configuration support
+-   0.3.2
+    -   Add 'Upload All Local Images in This Page' command
+-   0.3.1
+    -   Fix some minor problems
+-   0.3.0
+    -   Support Obsidian Live Preview Editor
 
 ## Getting started
 
@@ -110,11 +112,11 @@ Image Url Path: data.links.url
 
 ## Features
 
-- Automatically upload clipboard images to any image hosting service
-- Support resizing images before uploading
-- Support batch uploading all local images in the current page
-- Support custom image hosting API configuration
-- Support Obsidian Live Preview Editor
+-   Automatically upload clipboard images to any image hosting service
+-   Support resizing images before uploading
+-   Support batch uploading all local images in the current page
+-   Support custom image hosting API configuration
+-   Support Obsidian Live Preview Editor
 
 ## Usage
 
