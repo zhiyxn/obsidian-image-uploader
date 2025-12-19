@@ -126,13 +126,6 @@ Image Url Path: data.links.url
 2. Paste images directly in the editor (Ctrl+V or Cmd+V)
 3. The plugin will automatically upload the image and insert the Markdown link
 
-### Batch Upload Local Images
-
-1. Open the command palette (Ctrl+P or Cmd+P)
-2. Search and execute the "Upload All Local Images in This Page" command
-3. The plugin will scan all local images in the current page and upload them to the image hosting service
-4. After successful upload, the links will be automatically replaced with online links
-
 ## Thanks
 
 1. [obsidian-imgur-plugin](https://github.com/gavvvr/obsidian-imgur-plugin)

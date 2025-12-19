@@ -126,13 +126,6 @@ Image Url Path: data.links.url
 2. 在编辑器中直接粘贴图片（Ctrl+V 或 Cmd+V）
 3. 插件会自动上传图片并插入 Markdown 链接
 
-### 批量上传本地图片
-
-1. 打开命令面板（Ctrl+P 或 Cmd+P）
-2. 搜索并执行"Upload All Local Images in This Page"命令
-3. 插件会扫描当前页面的所有本地图片并上传到图床
-4. 上传成功后自动替换为在线链接
-
 ## 致谢
 
 1. [obsidian-imgur-plugin](https://github.com/gavvvr/obsidian-imgur-plugin)
